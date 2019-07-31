@@ -18,12 +18,12 @@
         </tr>
       </thead>
       <tbody>
-        {% for index_value in current_index_values %}
+        {% for item in current_index_values %}
         <tr>
-          <td>{{ index_value.name }}</td>
-          <td>{{ index_value.current_value }}</td>
-          <td>{{ index_value.points_change }}</td>
-          <td>{{ index_value.percent_change }}</td>
+          <td>{{ item.market_index.name }}</td>
+          <td>{{ item.current_value }}</td>
+          <td>{{ item.points_change }}</td>
+          <td>{{ item.percent_change }}</td>
         </tr>
         {% endfor %}
       </tbody>
