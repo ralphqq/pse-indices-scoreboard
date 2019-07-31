@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Home{% endblock %}
+
+{% block page_content %}
+<div class="row">
+  <h1>PH Indices</h1>
+  <div class="col-md-6"></div>
+    <p>Values as of</p>
+    {% if current_index_values %}
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Index</th>
+          <th>Value</th>
+          <th>Chg</th>
+          <th>% Chg</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for index_value in current_index_values %}
+        <tr>
+          <td>{{ index_value.name }}</td>
+          <td>{{ index_value.current_value }}</td>
+          <td>{{ index_value.points_change }}</td>
+          <td>{{ index_value.percent_change }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p><em>No index values to display at this time</em></p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
