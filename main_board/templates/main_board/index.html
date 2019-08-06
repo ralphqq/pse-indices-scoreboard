@@ -6,7 +6,7 @@
 <div class="row">
   <h1>PH Indices</h1>
   <div class="col-md-6"></div>
-    <p>Values as of</p>
+    <p>Values as of {{ last_update_time }}</p>
     {% if current_index_values %}
     <table class="table table-hover">
       <thead class="thead-dark">
@@ -23,7 +23,7 @@
           <td>{{ item.market_index.name }}</td>
           <td>{{ item.current_value }}</td>
           <td>{{ item.points_change }}</td>
-          <td>{{ item.percent_change }}</td>
+          <td>{{ item.percent_change }}%</td>
         </tr>
         {% endfor %}
       </tbody>
