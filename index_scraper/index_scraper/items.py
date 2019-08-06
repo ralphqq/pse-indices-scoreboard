@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
 
 class IndexScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    current_value = scrapy.Field()
+    points_change = scrapy.Field()
+    percent_change = scrapy.Field()
+    market_status = scrapy.Field()

@@ -5,6 +5,8 @@ import json
 import pytz
 import scrapy
 
+from index_scraper.items import IndexScraperItem
+
 
 class IndicesSpider(scrapy.Spider):
     name = 'indices'
@@ -36,13 +38,14 @@ class IndicesSpider(scrapy.Spider):
             raise ValueError('No data obtained')
 
         for record in records:
-            yield {
-                'name': record['indexName'],
-                'current_value': record['indexPoints'],
-                'points_change': record['changeValue'],
-                'percent_change': record['percentageChange'],
-                'market_status': record['marketStatus']
-            }
+            item = IndexScraperItem()
+            item['name'] = record['indexName']
+            item['current_value'] = record['indexPoints']
+            item['points_change'] = record['changeValue']
+            item['percent_change'] = record['percentageChange']
+            item['market_status'] = record['marketStatus']
+
+            yield item
 
     def get_url(self):
         utc_now = pytz.utc.localize(datetime.utcnow())
