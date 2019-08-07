@@ -5,7 +5,10 @@ import sys
 import django
 
 # Wiring up Scrapy project with Django project
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".."))
+S_ROOT = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..")
+if S_ROOT not in sys.path:
+    sys.path.append(S_ROOT)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pse_summary.settings'
 django.setup()
 
