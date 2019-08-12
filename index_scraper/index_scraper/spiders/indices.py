@@ -5,7 +5,7 @@ import json
 import pytz
 import scrapy
 
-from index_scraper.items import IndexScraperItem
+from ..items import IndexScraperItem
 
 
 class IndicesSpider(scrapy.Spider):

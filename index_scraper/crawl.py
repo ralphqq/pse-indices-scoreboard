@@ -1,13 +1,20 @@
+import os
+
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
-from index_scraper.spiders.indices import IndicesSpider
+from index_scraper.index_scraper.spiders.indices import IndicesSpider
 
 
-def run_crawler():
-    process = CrawlerProcess(get_project_settings())
-    process.crawl(IndicesSpider)
-    process.start()
+class IndicesCrawler:
+    def __init__(self):
+        os.environ.setdefault(
+            'SCRAPY_SETTINGS_MODULE',
+            'index_scraper.index_scraper.config'
+        )
+        self.process = CrawlerProcess(get_project_settings())
+        self.spider = IndicesSpider
 
-if __name__ == '__main__':
-    run_crawler()
+    def run_spider(self):
+        self.process.crawl(self.spider)
+        self.process.start()

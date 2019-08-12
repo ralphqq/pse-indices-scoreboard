@@ -23,8 +23,8 @@ django.setup()
 
 BOT_NAME = 'index_scraper'
 
-SPIDER_MODULES = ['index_scraper.spiders']
-NEWSPIDER_MODULE = 'index_scraper.spiders'
+SPIDER_MODULES = ['index_scraper.index_scraper.spiders']
+NEWSPIDER_MODULE = 'index_scraper.index_scraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -77,7 +77,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'index_scraper.pipelines.IndexScraperPipeline': 300,
+    'index_scraper.index_scraper.pipelines.IndexScraperPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
