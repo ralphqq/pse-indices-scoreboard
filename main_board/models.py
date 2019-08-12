@@ -18,6 +18,7 @@ class ValueUpdate(models.Model):
     current_value = models.DecimalField(max_digits=10, decimal_places=2)
     points_change = models.DecimalField(max_digits=10, decimal_places=2)
     percent_change = models.DecimalField(max_digits=5, decimal_places=2)
+    market_status = models.CharField(max_length=20, blank=True)
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):

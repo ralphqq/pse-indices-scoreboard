@@ -18,7 +18,8 @@ class IndexScraperPipeline(object):
             val_update = market_index.valueupdate_set.create(
                 current_value = item['current_value'],
                 points_change = item['points_change'],
-                percent_change = item['percent_change']
+                percent_change = item['percent_change'],
+                market_status=item['market_status']
             )
 
         return item
