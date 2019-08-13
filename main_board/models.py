@@ -23,3 +23,8 @@ class ValueUpdate(models.Model):
 
     def __str__(self):
         return f'{self.market_index.name}: {self.updated_at.isoformat()}'
+
+    @staticmethod
+    def is_open():
+        last_entry = ValueUpdate.objects.order_by('updated_at').last()
+        return last_entry.market_status == 'OPEN'

@@ -46,7 +46,8 @@ class IndicesSpider(scrapy.Spider):
 
                 yield item
 
-        logging.log(logging.INFO, 'No data obtained')
+        else:
+            logging.log(logging.INFO, 'No data obtained')
 
     def get_url(self):
         utc_now = pytz.utc.localize(datetime.utcnow())
