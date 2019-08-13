@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 import json
+import logging
 
 import pytz
 import scrapy
@@ -34,18 +35,18 @@ class IndicesSpider(scrapy.Spider):
 
     def parse_object(self, response):
         records = json.loads(response.text).get('records')
-        if not records:
-            raise ValueError('No data obtained')
+        if records:
+            for record in records:
+                item = IndexScraperItem()
+                item['name'] = record['indexName']
+                item['current_value'] = record['indexPoints']
+                item['points_change'] = record['changeValue']
+                item['percent_change'] = record['percentageChange']
+                item['market_status'] = record['marketStatus']
 
-        for record in records:
-            item = IndexScraperItem()
-            item['name'] = record['indexName']
-            item['current_value'] = record['indexPoints']
-            item['points_change'] = record['changeValue']
-            item['percent_change'] = record['percentageChange']
-            item['market_status'] = record['marketStatus']
+                yield item
 
-            yield item
+        logging.log(logging.INFO, 'No data obtained')
 
     def get_url(self):
         utc_now = pytz.utc.localize(datetime.utcnow())

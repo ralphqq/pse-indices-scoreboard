@@ -9,6 +9,7 @@ db.sqlite3
 
 /static
 
+celerybeat.pid
 celerybeat-schedule
 celerybeat-schedule.bak
 celerybeat-schedule.dat
