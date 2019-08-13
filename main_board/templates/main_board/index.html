@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block page_title %}Home{% endblock %}
 
@@ -13,7 +14,7 @@
         <tr>
           <th>Index</th>
           <th>Value</th>
-          <th>Chg</th>
+          <th>Pts Chg</th>
           <th>% Chg</th>
         </tr>
       </thead>
@@ -21,9 +22,9 @@
         {% for item in current_index_values %}
         <tr>
           <td>{{ item.market_index.name }}</td>
-          <td>{{ item.current_value }}</td>
-          <td>{{ item.points_change }}</td>
-          <td>{{ item.percent_change }}%</td>
+          <td>{{ item.current_value|intcomma }}</td>
+          <td>{{ item.points_change|stringformat:'+.2f'|intcomma }}</td>
+          <td>{{ item.percent_change|stringformat:'+.2f'|intcomma }}%</td>
         </tr>
         {% endfor %}
       </tbody>
