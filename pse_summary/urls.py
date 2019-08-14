@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
 from main_board import views as board_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', board_views.BoardView.as_view(), name='homepage')
+    path('', board_views.BoardView.as_view(), name='homepage'),
+    path('disclaimer/',
+         TemplateView.as_view(template_name='main_board/disclaimer.html'),
+         name='disclaimer'),
 ]

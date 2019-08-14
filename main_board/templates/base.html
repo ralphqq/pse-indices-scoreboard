@@ -61,7 +61,9 @@
               <div class="col-md-12">
                 {% block page_footer_links %}
                 <ul class="list-inline">
-                  <li><a href="#">Terms of Service</a></li>
+                  <li>
+                    <a href="{% url 'disclaimer' %}">Disclaimer</a>
+                  </li>
                   <li><a href="#">Privacy Policy</a></li>
                 </ul>
                 {% endblock %}
