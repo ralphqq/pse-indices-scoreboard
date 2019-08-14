@@ -18,7 +18,7 @@ The main packages that make up this project include:
 Please see project's `requirements.txt` file for a complete list of dependencies.
 
 ## Celery Beat Schedule Settings
-The app's Scrapy spider is set to crawl the PSE homepage every 5 minutes from 9 a.m. to 4 p.m. (Philippine local time) from Mondays through Fridays. This can be adjusted by modifying the `CELERY_BEAT_SCHEDULE` setting under the `pse_summary/settings.py` module as follows:
+The app's Scrapy spider is set to crawl the PSE homepage every 3 minutes from 9 a.m. to 4 p.m. (Philippine local time) from Mondays through Fridays. This can be adjusted by modifying the `CELERY_BEAT_SCHEDULE` setting under the `pse_summary/settings.py` module as follows:
 
 ```
 CELERY_BEAT_SCHEDULE = {

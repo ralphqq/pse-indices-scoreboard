@@ -136,6 +136,6 @@ CELERY_TIMEZONE = TIME_ZONE
 CELERY_BEAT_SCHEDULE = {
     'get-values-during-business-hours': {
         'task': 'index_getter',
-        'schedule': crontab(minute='*/5', hour='9-16', day_of_week='1-5')
+        'schedule': crontab(minute='*/3', hour='9-16', day_of_week='1-5')
     }
 }
