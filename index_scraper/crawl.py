@@ -12,7 +12,16 @@ class IndicesCrawler:
             'SCRAPY_SETTINGS_MODULE',
             'index_scraper.index_scraper.config'
         )
-        self.process = CrawlerProcess(get_project_settings())
+
+        # Customize crawl settings
+        s = get_project_settings()
+        s['SPIDER_MODULES'] = ['index_scraper.index_scraper.spiders']
+        s['NEWSPIDER_MODULE'] = 'index_scraper.index_scraper.spiders'
+        s['ITEM_PIPELINES'] = {
+            'index_scraper.index_scraper.pipelines.IndexScraperPipeline': 300,
+        }
+
+        self.process = CrawlerProcess(s)
         self.spider = IndicesSpider
 
     def run_spider(self):
