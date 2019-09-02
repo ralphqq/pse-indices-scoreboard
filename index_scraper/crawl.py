@@ -7,7 +7,7 @@ from index_scraper.index_scraper.spiders.indices import IndicesSpider
 
 
 class IndicesCrawler:
-    def __init__(self):
+    def __init__(self, **kwargs):
         os.environ.setdefault(
             'SCRAPY_SETTINGS_MODULE',
             'index_scraper.index_scraper.config'
@@ -23,7 +23,8 @@ class IndicesCrawler:
 
         self.process = CrawlerProcess(s)
         self.spider = IndicesSpider
+        self.kwargs = kwargs
 
     def run_spider(self):
-        self.process.crawl(self.spider)
+        self.process.crawl(self.spider, **self.kwargs)
         self.process.start()

@@ -17,7 +17,9 @@ class MarketNotInSession(Exception):
 class IndexScraperPipeline(object):
     def process_item(self, item, spider):
         try:
-            if not ValueUpdate.is_open() and item['market_status'] != 'OPEN':
+            if (not ValueUpdate.is_open() and 
+                    item['market_status'] != 'OPEN' and 
+                    spider.db_mode == 'save'):
                 raise MarketNotInSession
             market_index = MarketIndex.objects.get(name=item['name'])
         except MarketIndex.DoesNotExist:
