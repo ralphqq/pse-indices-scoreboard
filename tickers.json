@@ -1,0 +1,10 @@
+[
+  {"ticker": "PSEi", "name": "PSEi"},
+  {"ticker": "ALLSHARES", "name": "All Shares"},
+  {"ticker": "FINANCIALS", "name": "Financials"},
+  {"ticker": "INDUSTRIAL", "name": "Industrial"},
+  {"ticker": "HOLDING", "name": "Holding Firms"},
+  {"ticker": "SERVICES", "name": "Services"},
+  {"ticker": "MINING", "name": "Mining and Oil"},
+  {"ticker": "PROPERTY", "name": "Property"}
+]

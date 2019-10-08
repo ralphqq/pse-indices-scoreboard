@@ -89,6 +89,9 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
         'PORT': os.environ.get('DB_PORT'),
+        'TEST': {
+            'NAME': 'test_pse_summary_db'
+        },
     }
 }
 
