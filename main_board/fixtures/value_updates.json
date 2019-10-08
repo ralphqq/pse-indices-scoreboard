@@ -1,0 +1,962 @@
+[
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8765,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1790.00",
+      "points_change": "-15.59",
+      "percent_change": "-0.86",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:24:02.866Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8766,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10460.89",
+      "points_change": "-16.37",
+      "percent_change": "-0.16",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:24:02.966Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8767,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7504.25",
+      "points_change": "-47.33",
+      "percent_change": "-0.63",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:24:03.059Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8768,
+    "fields": {
+      "market_index": 7,
+      "current_value": "8983.22",
+      "points_change": "140.15",
+      "percent_change": "1.58",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:24:03.162Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8769,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4034.55",
+      "points_change": "23.65",
+      "percent_change": "0.59",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:24:03.271Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8770,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1516.38",
+      "points_change": "5.74",
+      "percent_change": "0.38",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:24:03.372Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8771,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4666.17",
+      "points_change": "-9.43",
+      "percent_change": "-0.20",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.136Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8772,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7683.22",
+      "points_change": "-21.38",
+      "percent_change": "-0.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.243Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8773,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1790.00",
+      "points_change": "-15.59",
+      "percent_change": "-0.86",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.338Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8774,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10460.89",
+      "points_change": "-16.37",
+      "percent_change": "-0.16",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.436Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8775,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7504.25",
+      "points_change": "-47.33",
+      "percent_change": "-0.63",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.551Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8776,
+    "fields": {
+      "market_index": 7,
+      "current_value": "8983.22",
+      "points_change": "140.15",
+      "percent_change": "1.58",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.670Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8777,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4034.55",
+      "points_change": "23.65",
+      "percent_change": "0.59",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.854Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8778,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1516.38",
+      "points_change": "5.74",
+      "percent_change": "0.38",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:27:02.950Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8779,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4666.17",
+      "points_change": "-9.43",
+      "percent_change": "-0.20",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.140Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8780,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7683.22",
+      "points_change": "-21.38",
+      "percent_change": "-0.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.251Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8781,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1790.00",
+      "points_change": "-15.59",
+      "percent_change": "-0.86",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.350Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8782,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10460.89",
+      "points_change": "-16.37",
+      "percent_change": "-0.16",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.449Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8783,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7504.25",
+      "points_change": "-47.33",
+      "percent_change": "-0.63",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.552Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8784,
+    "fields": {
+      "market_index": 7,
+      "current_value": "8983.22",
+      "points_change": "140.15",
+      "percent_change": "1.58",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.652Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8785,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4034.55",
+      "points_change": "23.65",
+      "percent_change": "0.59",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.753Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8786,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1516.38",
+      "points_change": "5.74",
+      "percent_change": "0.38",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-07T07:30:02.857Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8787,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4666.17",
+      "points_change": "-9.43",
+      "percent_change": "-0.20",
+      "market_status": "CLOSED",
+      "updated_at": "2019-10-07T07:33:08.375Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8788,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4672.10",
+      "points_change": "5.93",
+      "percent_change": "0.13",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.106Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8789,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7698.71",
+      "points_change": "15.49",
+      "percent_change": "0.20",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.243Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8790,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1800.26",
+      "points_change": "10.26",
+      "percent_change": "0.57",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.332Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8791,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10508.91",
+      "points_change": "48.02",
+      "percent_change": "0.46",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.409Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8792,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7504.84",
+      "points_change": "0.59",
+      "percent_change": "0.01",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.497Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8793,
+    "fields": {
+      "market_index": 7,
+      "current_value": "8984.72",
+      "points_change": "1.50",
+      "percent_change": "0.02",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.587Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8794,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4046.20",
+      "points_change": "11.65",
+      "percent_change": "0.29",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.774Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8795,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.02",
+      "points_change": "-3.36",
+      "percent_change": "-0.22",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T01:33:02.846Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8796,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4679.13",
+      "points_change": "12.96",
+      "percent_change": "0.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.054Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8797,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7737.97",
+      "points_change": "54.75",
+      "percent_change": "0.71",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.149Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8798,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1786.24",
+      "points_change": "-3.76",
+      "percent_change": "-0.21",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.234Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8799,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10578.37",
+      "points_change": "117.48",
+      "percent_change": "1.12",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.311Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8800,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7599.39",
+      "points_change": "95.14",
+      "percent_change": "1.27",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.403Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8801,
+    "fields": {
+      "market_index": 7,
+      "current_value": "9122.16",
+      "points_change": "138.94",
+      "percent_change": "1.55",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.477Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8802,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4051.19",
+      "points_change": "16.64",
+      "percent_change": "0.41",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.585Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8803,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.73",
+      "points_change": "-2.65",
+      "percent_change": "-0.18",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:17:43.670Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8804,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4679.13",
+      "points_change": "12.96",
+      "percent_change": "0.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:01.921Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8805,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7737.97",
+      "points_change": "54.75",
+      "percent_change": "0.71",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.029Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8806,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1786.24",
+      "points_change": "-3.76",
+      "percent_change": "-0.21",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.126Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8807,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10578.37",
+      "points_change": "117.48",
+      "percent_change": "1.12",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.249Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8808,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7599.39",
+      "points_change": "95.14",
+      "percent_change": "1.27",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.333Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8809,
+    "fields": {
+      "market_index": 7,
+      "current_value": "9122.16",
+      "points_change": "138.94",
+      "percent_change": "1.55",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.449Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8810,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4051.19",
+      "points_change": "16.64",
+      "percent_change": "0.41",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.539Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8811,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.73",
+      "points_change": "-2.65",
+      "percent_change": "-0.18",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:18:02.621Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8812,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4688.39",
+      "points_change": "22.22",
+      "percent_change": "0.48",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:01.859Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8813,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7756.72",
+      "points_change": "73.50",
+      "percent_change": "0.96",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:01.963Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8814,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1792.41",
+      "points_change": "2.41",
+      "percent_change": "0.14",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:02.056Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8815,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10594.84",
+      "points_change": "133.95",
+      "percent_change": "1.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:02.147Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8816,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7639.04",
+      "points_change": "134.79",
+      "percent_change": "1.80",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:02.252Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8817,
+    "fields": {
+      "market_index": 7,
+      "current_value": "9157.67",
+      "points_change": "174.45",
+      "percent_change": "1.94",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:02.365Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8818,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4043.91",
+      "points_change": "9.36",
+      "percent_change": "0.23",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:02.501Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8819,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.45",
+      "points_change": "-2.93",
+      "percent_change": "-0.19",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:21:02.637Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8820,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4688.39",
+      "points_change": "22.22",
+      "percent_change": "0.48",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.138Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8821,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7756.72",
+      "points_change": "73.50",
+      "percent_change": "0.96",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.241Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8822,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1792.41",
+      "points_change": "2.41",
+      "percent_change": "0.14",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.339Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8823,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10594.84",
+      "points_change": "133.95",
+      "percent_change": "1.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.450Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8824,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7639.04",
+      "points_change": "134.79",
+      "percent_change": "1.80",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.562Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8825,
+    "fields": {
+      "market_index": 7,
+      "current_value": "9157.67",
+      "points_change": "174.45",
+      "percent_change": "1.94",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.679Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8826,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4043.91",
+      "points_change": "9.36",
+      "percent_change": "0.23",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.770Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8827,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.45",
+      "points_change": "-2.93",
+      "percent_change": "-0.19",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:24:02.858Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8828,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4688.39",
+      "points_change": "22.22",
+      "percent_change": "0.48",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.165Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8829,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7756.72",
+      "points_change": "73.50",
+      "percent_change": "0.96",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.298Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8830,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1792.41",
+      "points_change": "2.41",
+      "percent_change": "0.14",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.387Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8831,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10594.84",
+      "points_change": "133.95",
+      "percent_change": "1.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.491Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8832,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7639.04",
+      "points_change": "134.79",
+      "percent_change": "1.80",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.600Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8833,
+    "fields": {
+      "market_index": 7,
+      "current_value": "9157.67",
+      "points_change": "174.45",
+      "percent_change": "1.94",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.696Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8834,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4043.91",
+      "points_change": "9.36",
+      "percent_change": "0.23",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.793Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8835,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.45",
+      "points_change": "-2.93",
+      "percent_change": "-0.19",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:27:02.913Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8836,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4688.39",
+      "points_change": "22.22",
+      "percent_change": "0.48",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:01.980Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8837,
+    "fields": {
+      "market_index": 1,
+      "current_value": "7756.72",
+      "points_change": "73.50",
+      "percent_change": "0.96",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.126Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8838,
+    "fields": {
+      "market_index": 3,
+      "current_value": "1792.41",
+      "points_change": "2.41",
+      "percent_change": "0.14",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.231Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8839,
+    "fields": {
+      "market_index": 4,
+      "current_value": "10594.84",
+      "points_change": "133.95",
+      "percent_change": "1.28",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.345Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8840,
+    "fields": {
+      "market_index": 5,
+      "current_value": "7639.04",
+      "points_change": "134.79",
+      "percent_change": "1.80",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.450Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8841,
+    "fields": {
+      "market_index": 7,
+      "current_value": "9157.67",
+      "points_change": "174.45",
+      "percent_change": "1.94",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.576Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8842,
+    "fields": {
+      "market_index": 8,
+      "current_value": "4043.91",
+      "points_change": "9.36",
+      "percent_change": "0.23",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.709Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8843,
+    "fields": {
+      "market_index": 6,
+      "current_value": "1513.45",
+      "points_change": "-2.93",
+      "percent_change": "-0.19",
+      "market_status": "OPEN",
+      "updated_at": "2019-10-08T07:30:02.806Z"
+    }
+  },
+  {
+    "model": "main_board.valueupdate",
+    "pk": 8844,
+    "fields": {
+      "market_index": 2,
+      "current_value": "4688.39",
+      "points_change": "22.22",
+      "percent_change": "0.48",
+      "market_status": "CLOSED",
+      "updated_at": "2019-10-08T07:33:02.121Z"
+    }
+  }
+]

@@ -16,3 +16,4 @@ celerybeat-schedule.dat
 celerybeat-schedule.dir
 
 !tickers.json
+!value_updates.json
