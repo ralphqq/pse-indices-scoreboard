@@ -15,7 +15,15 @@ The main packages that make up this project include:
 * redis==3.3.5
 * Scrapy==1.7.2
 
-Please see project's `requirements.txt` file for a complete list of dependencies.
+The app uses a PostgreSQL database, so it requires `psycopg2` to be installed. Please see project's `requirements.txt` file for a complete list of dependencies.
+
+### Environment Variables
+The app expects appropriate values for the following environment variables to be set in a `.env` file:
+
+* `DB_USERNAME`
+* `DB_PASSWORD`
+* `DB_NAME`
+* `DB_PORT`
 
 ## Celery Beat Schedule Settings
 The app's Scrapy spider is set to crawl the PSE homepage every 3 minutes from 9 a.m. to 4 p.m. (Philippine local time) from Mondays through Fridays. This can be adjusted by modifying the `CELERY_BEAT_SCHEDULE` setting under the `pse_summary/settings.py` module as follows:

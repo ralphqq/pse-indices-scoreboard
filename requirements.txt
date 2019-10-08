@@ -15,6 +15,7 @@ incremental==17.5.0
 kombu==4.6.3
 lxml==4.4.0
 parsel==1.5.1
+psycopg2==2.8.3
 pyasn1==0.4.5
 pyasn1-modules==0.2.5
 pycparser==2.19
@@ -22,6 +23,7 @@ PyDispatcher==2.0.5
 PyHamcrest==1.9.0
 pyOpenSSL==19.0.0
 pypiwin32==223
+python-dotenv==0.10.3
 pytz==2019.1
 pywin32==224
 queuelib==1.5.0
