@@ -4,7 +4,10 @@ import os
 from celery import Celery
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pse_summary.settings')
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'pse_summary.settings.development'
+)
 
 app = Celery('pse_summary')
 

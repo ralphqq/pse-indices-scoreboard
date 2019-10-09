@@ -1,12 +1,12 @@
 # pse-indices-scoreboard
-This Django app uses Scrapy, Celery, and Redis to collect, store, and display updated values of the 8 main indices of the Philippine equity market. The app tries to implement the following functionalities from scratch:
+This Django app uses Scrapy, Celery, and Redis to collect, store, and display updated values of the 8 main indices in the Philippine equity market. The app tries to implement the following functionalities from scratch:
 
 * Building a Scrapy spider that replicates an ajax request
 * Running a Scrapy spider in a Django app
 * Wiring up Scrapy item pipelines with Django models
 * Using Celery to schedule scraping tasks
 
-While there are already numerous tested tools and packages to carry out the above tasks, I just wanted to "reinvent the wheel" a little bit to see how far I can get away with it.
+While there are already numerous tested tools and packages to carry out the above activities, I just wanted to "reinvent the wheel" a little bit to see how far I can get away with it.
 
 ## Dependencies
 The main packages that make up this project include:
@@ -18,15 +18,18 @@ The main packages that make up this project include:
 The app uses a PostgreSQL database, so it requires `psycopg2` to be installed. Please see project's `requirements.txt` file for a complete list of dependencies.
 
 ### Environment Variables
-The app expects appropriate values for the following environment variables to be set in a `.env` file:
+The app expects appropriate values for the following environment variables to be set in a `.env` file or in a terminal session:
 
 * `DB_USERNAME`
 * `DB_PASSWORD`
 * `DB_NAME`
 * `DB_PORT`
+* `SECRET_KEY` (optional during development, required in production)
+* `SITENAME` (the site domain, optional during development, required in production)
+* `DJANGO_SETTINGS_MODULE` (set this to `pse_summary.settings.production` as appropriate or just leave it alone)
 
 ## Celery Beat Schedule Settings
-The app's Scrapy spider is set to crawl the PSE homepage every 3 minutes from 9 a.m. to 4 p.m. (Philippine local time) from Mondays through Fridays. This can be adjusted by modifying the `CELERY_BEAT_SCHEDULE` setting under the `pse_summary/settings.py` module as follows:
+The app's Scrapy spider is set to crawl the PSE homepage every 3 minutes from 9 a.m. to 4 p.m. (Philippine local time) from Mondays through Fridays. This can be adjusted by modifying the `CELERY_BEAT_SCHEDULE` setting under the `pse_summary/settings/base.py` module as follows:
 
 ```
 CELERY_BEAT_SCHEDULE = {

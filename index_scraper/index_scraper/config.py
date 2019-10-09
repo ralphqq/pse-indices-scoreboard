@@ -9,7 +9,11 @@ S_ROOT = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..")
 if S_ROOT not in sys.path:
     sys.path.append(S_ROOT)
-os.environ['DJANGO_SETTINGS_MODULE'] = 'pse_summary.settings'
+
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'pse_summary.settings.development'
+)
 django.setup()
 
 # Scrapy settings for index_scraper project
