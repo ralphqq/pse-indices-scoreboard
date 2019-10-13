@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=pse_summary.settings.production
+      - DB_HOST=db
+    ports:
+      - "8000:8000"
+
+  db:
+    image: postgres:10.5-alpine
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+    env_file:
+      - .env
+
+volumes:
+  dbdata:
