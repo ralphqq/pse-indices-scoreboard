@@ -2,29 +2,27 @@
 
 set -euo
 
-echo Starting up PostgreSQL
+cmd="$@"
 
-while !</dev/tcp/$DB_HOST/$DB_PORT; do
-  sleep 0.1
+echo Waiting for Postgres
+sleep 5
+
+while !</dev/tcp/db/5432; do
+  echo Postgres is not yet available
+  sleep 5
 done
 
-echo PostgreSQL started
+echo PostgreSQL started up successfully
 
 echo Activating virtual environment
 source /home/venv/bin/activate
 
-# Set secret key
-export DJANGO_SETTINGS_MODULE=pse_summary.settings.production
-echo SECRET_KEY=$(\
-python -c"import random; print(''.join(random.SystemRandom().\
-choices('abcdefghijklmnopqrstuvwxyz0123456789', k=50)))"\
-) >> .env
+source ./secret-key.sh
 
-echo Initializing db
+if [ $1 = "gunicorn" ]; then
+  echo Initializing app
+  python manage.py collectstatic --noinput
+  python manage.py migrate --noinput
+fi
 
-python manage.py flush --no-input
-python manage.py migrate
-
-echo Starting up gunicorn
-
-exec gunicorn -b :8000 --access-logfile - --error-logfile - pse_summary.wsgi:application
+exec $cmd

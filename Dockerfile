@@ -25,15 +25,18 @@ RUN /home/venv/bin/pip install gunicorn
 # Copy project directory to workdir
 COPY . .
 
-# Make boot.sh executable
-RUN chmod ugo+x boot.sh 
+# Make bash files executable
+RUN chmod ugo+x boot.sh
+RUN chmod ugo+x celery-worker.sh
+RUN chmod ugo+x celery-beat.sh 
+
+# Set some environment variables
+ENV DJANGO_SETTINGS_MODULE=pse_summary.settings.production
+ENV CELERY_BROKER_URL=redis://redis:6379
+ENV CELERY_RESULT_BACKEND=redis://redis:6379
 
 # Set psei as workdir owner and current user (exclude venv dir)
 RUN chown -R psei:psei ./
 USER psei
 
-# Specify port
-EXPOSE 8000
-
-# Set container entry point
-ENTRYPOINT ["./boot.sh"]
+# Ports and entrypoint are set in docker-compose.yml file

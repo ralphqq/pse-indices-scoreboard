@@ -5,13 +5,16 @@ services:
     build: .
     depends_on:
       - db
+      - redis
     env_file:
       - .env
     environment:
-      - DJANGO_SETTINGS_MODULE=pse_summary.settings.production
       - DB_HOST=db
+      - SITENAME=localhost
     ports:
       - "8000:8000"
+    restart: unless-stopped
+    command: ["./boot.sh", "gunicorn", "-b", ":8000", "--access-logfile", "-", "--error-logfile", "-", "pse_summary.wsgi:application"]
 
   db:
     image: postgres:10.5-alpine
@@ -19,6 +22,33 @@ services:
       - "dbdata:/var/lib/postgresql/data"
     env_file:
       - .env
+
+  redis:
+    image: "redis:alpine"
+
+  celery-worker:
+    build: .
+    command: ["./boot.sh", "celery", "-A", "pse_summary", "worker", "-l", "INFO"]
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=db
+    depends_on:
+      - redis
+      - app
+    restart: unless-stopped
+
+  celery-beat:
+    build: .
+    command: ["./boot.sh", "celery", "-A", "pse_summary", "beat", "-l", "INFO"]
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=db
+    depends_on:
+      - redis
+      - celery-worker
+    restart: unless-stopped
 
 volumes:
   dbdata:

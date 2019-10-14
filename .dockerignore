@@ -5,4 +5,5 @@
 !boot.sh
 !manage.py
 !requirements.txt
+!secret-key.sh
 !tickers.json
