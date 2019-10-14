@@ -25,10 +25,8 @@ RUN /home/venv/bin/pip install gunicorn
 # Copy project directory to workdir
 COPY . .
 
-# Make bash files executable
+# Make entry point file executable
 RUN chmod ugo+x boot.sh
-RUN chmod ugo+x celery-worker.sh
-RUN chmod ugo+x celery-beat.sh 
 
 # Set some environment variables
 ENV DJANGO_SETTINGS_MODULE=pse_summary.settings.production
