@@ -27,4 +27,6 @@ class ValueUpdate(models.Model):
     @staticmethod
     def is_open():
         last_entry = ValueUpdate.objects.order_by('updated_at').last()
+        if last_entry is None:
+            return False
         return last_entry.market_status == 'OPEN'

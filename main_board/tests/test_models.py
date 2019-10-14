@@ -4,7 +4,7 @@ import os
 from django.conf import settings
 from django.test import TestCase
 
-from main_board.models import MarketIndex
+from main_board.models import MarketIndex, ValueUpdate
 
 
 class MarketIndexModelTest(TestCase):
@@ -29,3 +29,10 @@ class MarketIndexModelTest(TestCase):
         valid_tickers = [item['ticker'] for item in self.expected_records]
         for ind in MarketIndex.objects.all():
             self.assertIn(ind.ticker, valid_tickers)
+
+
+class ValueUpdateModelTest(TestCase):
+
+    def test_if_is_open_method_returns_false_if_db_is_empty(self):
+        self.assertEqual(ValueUpdate.objects.count(), 0)
+        self.assertEqual(ValueUpdate.is_open(), False)
