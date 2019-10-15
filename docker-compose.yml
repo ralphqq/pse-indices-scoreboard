@@ -11,8 +11,8 @@ services:
     environment:
       - DB_HOST=db
       - SITENAME=app
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     restart: unless-stopped
     command: ["./boot.sh", "gunicorn", "-b", ":8000", "--access-logfile", "-", "--error-logfile", "-", "pse_summary.wsgi:application"]
 
