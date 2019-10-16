@@ -22,8 +22,13 @@ RUN /home/venv/bin/pip install --upgrade pip
 RUN /home/venv/bin/pip install -r requirements.txt
 RUN /home/venv/bin/pip install gunicorn
 
-# Copy project directory to workdir
-COPY . .
+# Copy project subdirectories to workdir
+COPY index_scraper index_scraper
+COPY main_board main_board
+COPY pse_summary pse_summary
+
+# Copy other top level files
+COPY boot.sh manage.py secret-key.sh tickers.json ./
 
 # Make entry point file executable
 RUN chmod ugo+x boot.sh
