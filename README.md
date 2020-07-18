@@ -109,6 +109,13 @@ CELERY_BEAT_SCHEDULE = {
 
 To achieve mor granular control over the spider's crawl schedule, please read more about crontab settings on the [Periodic Tasks](https://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html) page of the Celery documentation.
 
+### Testing
+To run test suite:
+
+```console
+$ pytest
+```
+
 ## Resources
 Getting Scrapy, Django, and Celery to play nice together (without other third-party packages) took me a while to figure out. That's why using packages like [django-dynamic-scraper](https://django-dynamic-scraper.readthedocs.io/) is probably a better route to take for most use-cases (though I haven't tried it out yet).
 
@@ -118,13 +125,6 @@ That said, the following resources helped me work around dead ends and hack this
 * [ModuleNotFoundError when setting Scrapy as an app in Django](https://stackoverflow.com/questions/55236051/modulenotfounderror-when-sets-scrapy-as-an-app-in-django)
 * [Getting Scrapy project settings when script is outside of root directory](https://stackoverflow.com/questions/31662797/getting-scrapy-project-settings-when-script-is-outside-of-root-directory)
 * [Django Celery Docker Example](https://github.com/chrisk314/django-celery-docker-example)
-
-### Testing
-To run test suite:
-
-```console
-$ pytest
-```
 
 ## Contributing
 1. Fork this repo at https://github.com/ralphqq/pse-indices-scoreboard
