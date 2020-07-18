@@ -1,7 +1,7 @@
 amqp==2.5.0
 asgiref==3.2.10
 asn1crypto==0.24.0
-attrs==19.1.0
+attrs==19.3.0
 Automat==0.7.0
 billiard==3.6.0.0
 celery==4.3.0
