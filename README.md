@@ -10,7 +10,7 @@ This Django app uses Scrapy, Celery, and Redis to collect, store, and display up
 
 While there are already numerous tested tools and packages to carry out the above activities, I just wanted to "reinvent the wheel" a little bit to see how far I can get away with it.
 
-## Dependencies
+## Requirements
 The main packages that make up this project include:
 * Django==2.2.6
 * celery==4.3.0
@@ -18,6 +18,8 @@ The main packages that make up this project include:
 * Scrapy==1.7.2
 
 The app uses a PostgreSQL database, so it requires `psycopg2` to be installed. Please see project's `requirements.txt` file for a complete list of dependencies.
+
+## Development Setup
 
 ### Environment Variables
 The app expects appropriate values for the following environment variables to be set in a `.env` file or in a terminal session:
@@ -32,38 +34,71 @@ The app expects appropriate values for the following environment variables to be
 * `POSTGRES_PASSWORD` - must be the same as `DB_PASSWORD` (required when deploying via `docker-compose`)
 * `POSTGRES_DB` - must be the same as `DB_NAME` (required when deploying via `docker-compose`)
 
-## Deployment
+### Steps to Configure and Set Up
 The app can be launched directly in your local environment or via `docker-compose` as follows:
 
-### Directly in Local Environment
+#### Directly in Local Environment
 When running on local machine, make sure to follow the below steps:
 
 1. Activate a virtual environment where the dependencies are installed (or will be installed)
-2. Define the values for the environment variables in the `.env` file (see above)
-3. Make sure PostgreSQL engine is running
-4. Run a Redis server in a terminal
-5. Start a Celery worker in another terminal using the following command: `celery -A pse_summary worker -l INFO`
-6. Start Celery Beat in yet another terminal: `celery -A pse_summary beat -l INFO`
-7. Spin up the Django development server
+2. Install the development requirements:
+    ```console
+    $ pip install -r dev-requirements.txt
+    ```
+3. Define the values for the environment variables in the `.env` file (see above)
+4. Make sure PostgreSQL engine is running
+5. Run a Redis server in a terminal
+6. Start a Celery worker in another terminal using the following command:
+    ```console
+    $ celery -A pse_summary worker -l INFO
+    ```
+7. Start Celery Beat in yet another terminal:
+    ```console
+    $ celery -A pse_summary beat -l INFO
+    ```
+8. Apply migrations:
+    ```console
+    $ python manage.py migrate
+    ```
+9. Check if setup is ok by running tests:
+    ```console
+    $ pytest
+    ```
+10. Start the Django development server:
+    ```console
+    $ python manage.py runserver
+    ```
 
 **Note:** With the above steps and settings, the site should be accessible on `localhost:8000` on a browser.
 
-### Via Docker
+#### Via Docker
 This project includes a `Dockerfile`, a `docker-compose.yml` file, and bash scripts to help quickly launch a production-ready instance of the app. This setup launches Nginx, Gunicorn, Redis, Postgres, Celery Worker, and Celery Beat as services in separate containers. Just follow these steps:
 
 1. Activate a virtual environment where the dependencies are installed (or will be installed)
 2. Define the values for the environment variables in the `.env` file (see above)
-3. Run `python manage.py collectstatic --noinput`
-4. Build the needed images by running `docker-compose build`
-5. Launch the app with this command `docker-compose up`
-6. Stop the app by running `docker-compose down`
+3. Run command to collect all static files:
+    ```console:
+    $ python manage.py collectstatic --noinput
+    ```
+4. Build the needed images by running:
+    ```console
+    $ docker-compose build
+    ```
+5. Launch the app with this command:
+    ```console
+    $ docker-compose up
+    ```
+6. Stop the app by running:
+    ```console
+    $ docker-compose down
+    ```
 
 **Note:** Once running, the app should be accessible on `localhost:80`.
 
-## Celery Beat Schedule Settings
+### Celery Beat Schedule Settings
 The app's Scrapy spider is set to crawl the PSE homepage every 3 minutes from 9 a.m. to 4 p.m. (Philippine local time) from Mondays through Fridays. This can be adjusted by modifying the `CELERY_BEAT_SCHEDULE` setting under the `pse_summary/settings/base.py` module as follows:
 
-```
+```python
 CELERY_BEAT_SCHEDULE = {
     'get-values-during-business-hours': {
         'task': 'index_getter',
@@ -83,6 +118,32 @@ That said, the following resources helped me work around dead ends and hack this
 * [ModuleNotFoundError when setting Scrapy as an app in Django](https://stackoverflow.com/questions/55236051/modulenotfounderror-when-sets-scrapy-as-an-app-in-django)
 * [Getting Scrapy project settings when script is outside of root directory](https://stackoverflow.com/questions/31662797/getting-scrapy-project-settings-when-script-is-outside-of-root-directory)
 * [Django Celery Docker Example](https://github.com/chrisk314/django-celery-docker-example)
+
+### Testing
+To run test suite:
+
+```console
+$ pytest
+```
+
+## Contributing
+1. Fork this repo at https://github.com/ralphqq/pse-indices-scoreboard
+2. Clone your fork into your local machine
+3. Follow steps in development setup
+4. Create your feature branch:
+    ```console
+    $ git checkout -b feature/some-new-thing
+    ```
+5. Commit your changes:
+    ```console
+    $ git commit -m "Develop new thing"
+    ```
+6. Push to the branch:
+    ```console
+    $ git push origin feature/some-new-thing
+    ```
+7. Create a pull request
+
 
 ## License
 [MIT license](https://opensource.org/licenses/MIT)
