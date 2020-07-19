@@ -1,5 +1,5 @@
 # pse-indices-scoreboard
-![pse-indices-scoreboard-ci](https://github.com/ralphqq/pse-indices-scoreboard/workflows/pse-indices-scoreboard-ci/badge.svg)
+![Build Status](https://github.com/ralphqq/pse-indices-scoreboard/workflows/pse-indices-scoreboard-ci/badge.svg)
 This Django app uses Scrapy, Celery, and Redis to collect, store, and display updated values of the 8 main indices in the Philippine equity market. The app tries to implement the following functionalities from scratch:
 
 * Building a Scrapy spider that replicates an ajax request
